@@ -1,4 +1,4 @@
-# portfolio_tracker
+# Portfolio Tracker
 This repository contains Python and Google script codes that enable the automated collation of stock price data, and the creation of tables and graphs for a portfolio-tracking website. 
 
 The project relies on two programs:
