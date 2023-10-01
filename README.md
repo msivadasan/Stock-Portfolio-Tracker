@@ -1,5 +1,5 @@
 # Stock Portfolio Tracker
-This repository contains Python and Google script codes that enable the automated collation of stock price data, and the creation of tables and graphs for a portfolio-tracking website. 
+This repository contains Python and Google script codes that enable the automated collation of stock price data, and the creation of tables and graphs for a <a href="https://sites.google.com/view/madhavsivadasan/projects/stock-portfolio-tracker"> portfolio-tracking website </a>. 
 
 The project relies on two programs:
 1. <a href="https://github.com/msivadasan/portfolio_tracker/blob/main/download_stock_rev.py"> download_stock_rev.py </a>:  This is Python code that undertakes the following tasks: 
