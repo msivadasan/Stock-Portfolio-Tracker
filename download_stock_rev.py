@@ -41,10 +41,10 @@ def myfigures(matrix, col, counter, legend1, legend2, legendon, name):
     if legendon==1:
         plt.gca().add_artist(first_legend)
         plt.legend(loc='upper right')
-    cc=str(name)+str(ii)+ str(".png")
+    cc=str("C:\\Users\\jagadees\\Google Drive\\Madhav\\10thgrade\\Personal project\\")+str()+str(name)+str(ii)+ str(".png")
     plt.savefig(cc, bbox_inches='tight')
-    print("This is Fig:", counter)
-    plt.show()
+    #print("This is Fig:", counter)
+    #plt.show()
 ###########################################################################
 ##This is code to import stock price data from Yahoo Finance    
 ##I follow advice from "How to download from Yahoo! Finance: https://pythonrepo.com/repo/ranaroussi-yfinance-python-finance"
@@ -52,7 +52,7 @@ invvalues={}
 for ii in range (0, len(dop)):
     today = date.today()
     xx = yf.download(tickers=tickers.iloc[ii,0], start=datetime(2021, 1, 1), end=today)
-    print(xx)
+    #print(xx)
     xx['ticker']=str(tickers.iloc[ii,0]) #Adds the ticker symbol as column 1 in dataframe
 
     #######################################################################################
@@ -101,9 +101,9 @@ for ii in range (0,len(dop)):
     plt.vlines(dop.iloc[ii,0],tmin,tmax)
     plt.title((dd.iloc[ii,0]+str(":Portfolio Value")))
     blck_line = mlines.Line2D([], [], color='black', markersize=15, label='Purchase Date')
-    cc=str("vfig")+str(ii)+ str(".png")
+    cc=str("C:\\Users\\jagadees\\Google Drive\\Madhav\\10thgrade\\Personal project\\")+str("vfig")+str(ii)+ str(".png")
     plt.savefig(cc, bbox_inches='tight')
-    plt.show()
+    #plt.show()
 ################################################################################
 #The code below adds the values across each of the stocks, and then plots the figure of the portfolio value
 dfallinv['PValue']=dfallinv['InvestValue0']
@@ -120,9 +120,9 @@ tmin=min(dfvv[:,len(dop)+1])
 tmax=max(dfvv[:,len(dop)+1])
 plt.vlines(dop.iloc[ii,0],tmin,tmax)
 plt.title(("Overall Portfolio Value"))
-cc=str("pvfig")+str(".png")
+cc=str("C:\\Users\\jagadees\\Google Drive\\Madhav\\10thgrade\\Personal project\\")+str("pvfig")+str(".png")
 plt.savefig(cc, bbox_inches='tight')
-plt.show()
+#plt.show()
 ##########################################################################
 #This code collects the information for each stock for the latest trading date
 pv= dfallinv.iloc[[0,-1]]
@@ -143,5 +143,5 @@ old_names = pvt.columns[column_indices]
 pvt.rename(columns=dict(zip(old_names, new_names)), inplace=True)
 pvt['Latest Trade Date']=lasttdate
 pvt=pvt[['Stock',"Purchase Date", 'Initial Value','Latest Trade Date', "Latest Trade Value"]]
-pvt.to_csv("pv.csv", index=False, float_format='%.2f')
+pvt.to_csv(r"C:\Users\jagadees\Google Drive\Madhav\10thgrade\Personal project\pv.csv", index=False, float_format='%.2f')
 ####################################################################
