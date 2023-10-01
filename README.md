@@ -14,10 +14,8 @@ The project relies on two programs:
 
 The Windows task scheduler is used to run batch file daily around 7:30 PM (after New York financial markets have closed). The.bat file has the following commands:
 
-call %cd%\Anaconda3\Scripts\activate.bat
-
-cd "%path-to-directory%"
-
+call %cd%\Anaconda3\Scripts\activate.bat  \r
+cd "%path-to-directory%" \r
 python "%path-to-code%\download_stock_rev.py"
 
 For help with setting up the Windows task scheduler, see this <a href="https://stackoverflow.com/questions/4437701/run-a-batch-file-with-windows-task-scheduler"> StackExchange post </a>. 
